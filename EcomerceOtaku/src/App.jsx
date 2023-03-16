@@ -14,6 +14,8 @@ import InfoCard from "./components/infoCard";
 import Label from "./components/Label";
 import HotDeals from "./components/HotDeals";
 import ProductCard from "./components/ProductCard";
+import Article from "./components/Article";
+import SubscriptionForm from "./components/SubscriptionForm";
 
 
 
@@ -21,17 +23,17 @@ function App() {
   return (
     <div className="App">
       <Header>
-      <Logo/>
-      <SearchInput/>
-      <LoginAndCart/>
-      <NavBar>
-      <NavBarItems href={"#"} linkDescription={"Inicio"}/>
-      <NavBarItems href={"#"} linkDescription={"Productos"}/>
-      <NavBarItems href={"#"} linkDescription={"Contacto"}/>
-      <NavBarItems href={"#"} linkDescription={"Ofertas"}/>
-      </NavBar> 
-       </Header>
-       <Main>
+        <Logo/>
+        <SearchInput/>
+        <LoginAndCart/>
+        <NavBar>
+          <NavBarItems href={"#"} linkDescription={"Inicio"}/>
+          <NavBarItems href={"#"} linkDescription={"Productos"}/>
+          <NavBarItems href={"#"} linkDescription={"Contacto"}/>
+          <NavBarItems href={"#"} linkDescription={"Ofertas"}/>
+        </NavBar> 
+      </Header>
+      <Main>
         <Premiere>
           {/*Este swich me tiene que hacer scroll a la izquierda de los productos nuevos */}
           <SwichArrow/>
@@ -41,13 +43,12 @@ function App() {
           <SwichArrow/>
         </Premiere>
         <Label>
-        <InfoCard/>
-        <InfoCard/>
-        <InfoCard/>
-        </Label>
+          <InfoCard/>
+          <InfoCard/>
+          <InfoCard/>
+          </Label>
         <HotDeals>
           {/* Aqui tengo que renderizar las productos en oferta haciendo un get*/}
-          <ProductCard></ProductCard>
           <ProductCard></ProductCard>
           <ProductCard></ProductCard>
           <ProductCard></ProductCard>
@@ -55,7 +56,11 @@ function App() {
           este swicharrow es que me haga un scrool derecha a izquierda para ver los que no me pueda mostrar segun el espacio*/}
           <SwichArrow/>
         </HotDeals>
+        <Article/>
+        <Article/>
+        <SubscriptionForm/>
        </Main>
+       
     </div>
   );
 }
