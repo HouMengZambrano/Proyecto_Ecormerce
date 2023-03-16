@@ -12,6 +12,8 @@ import DebutProduct from "./components/DebutProduct";
 import Link from "./components/Link";
 import InfoCard from "./components/infoCard";
 import Label from "./components/Label";
+import HotDeals from "./components/HotDeals";
+import ProductCard from "./components/ProductCard";
 
 
 
@@ -31,8 +33,11 @@ function App() {
        </Header>
        <Main>
         <Premiere>
+          {/*Este swich me tiene que hacer scroll a la izquierda de los productos nuevos */}
           <SwichArrow/>
+
           <DebutProduct/>
+          {/*Este  swich me tiene que hacer scroll a la derecha de los productos nuevos */}
           <SwichArrow/>
         </Premiere>
         <Label>
@@ -40,6 +45,16 @@ function App() {
         <InfoCard/>
         <InfoCard/>
         </Label>
+        <HotDeals>
+          {/* Aqui tengo que renderizar las productos en oferta haciendo un get*/}
+          <ProductCard></ProductCard>
+          <ProductCard></ProductCard>
+          <ProductCard></ProductCard>
+          <ProductCard></ProductCard>
+          {/* El get de los productos de descuento me tiene que devolver al menos 10 productos y lo que va a hacer
+          este swicharrow es que me haga un scrool derecha a izquierda para ver los que no me pueda mostrar segun el espacio*/}
+          <SwichArrow/>
+        </HotDeals>
        </Main>
     </div>
   );
